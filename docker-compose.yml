@@ -9,6 +9,9 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   backend:
+    container_name: store_backend
+    networks:
+      - shared_network
     build: ./backend
     command: gunicorn config.wsgi:application --bind 0.0.0.0:8000
     volumes:
@@ -17,21 +20,9 @@ services:
     depends_on:
       - db
 
-  caddy:
-    image: caddy:2
-    restart: always
-    ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      - ./frontend/dist:/srv/frontend
-      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
-      - caddy_data:/data
-      - caddy_config:/config
-    depends_on:
-      - backend
-
 volumes:
   postgres_data:
-  caddy_data:
-  caddy_config:
+
+networks:
+  shared_network:
+    external: true
