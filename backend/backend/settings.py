@@ -30,7 +30,14 @@ SECRET_KEY = "django-insecure-w+hy1s*#&)2#hp_mvp=eb%r)4g%jv93e&k4k0h3n0u$(*n-_eb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["store.kodario.com", "www.store.kodario.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [
+    "shop.kodario.com",
+    "www.shop.kodario.com",
+    "localhost",
+    "127.0.0.1",
+]
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 
 # Application definition
@@ -134,18 +141,18 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-CORS_ALLOW_ALL_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:8000",
-    "https://store.kodario.com",
-    "https://www.store.kodario.com",
+    "https://shop.kodario.com",
+    "https://www.shop.kodario.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:8000",
-    "https://store.kodario.com",
-    "https://www.store.kodario.com",
+    "https://shop.kodario.com",
+    "https://www.shop.kodario.com",
 ]
 
 MEDIA_URL = "/media/"
