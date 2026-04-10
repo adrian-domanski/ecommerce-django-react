@@ -10,15 +10,15 @@
 
 ### 🏠 Homepage
 
-![Homepage](docs/1.png)
+![Homepage](docs/01.png)
 
 ### 🛍️ Product View
 
-![Product](docs/2.png)
+![Product](docs/02.png)
 
 ### 🧾 Checkout / Cart
 
-![Checkout](docs/3.png)
+![Checkout](docs/03.png)
 
 ---
 
