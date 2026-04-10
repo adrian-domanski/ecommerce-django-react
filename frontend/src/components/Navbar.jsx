@@ -53,20 +53,21 @@ function Navbar() {
             </button>
           )}
 
-          {/* CART */}
-          <Link
-            to='/cart'
-            className='relative flex items-center gap-2 text-gray-700 hover:text-black transition'
-          >
-            <span className='text-lg'>🛒</span>
-            <span className='hidden sm:inline'>Cart</span>
+          {isLoggedIn && (
+            <Link
+              to='/cart'
+              className='relative flex items-center gap-2 text-gray-700 hover:text-black transition'
+            >
+              <span className='text-lg'>🛒</span>
+              <span className='hidden sm:inline'>Cart</span>
 
-            {cartCount > 0 && (
-              <span className='absolute -top-2 -right-3 bg-black text-white text-xs font-semibold rounded-full min-w-[20px] h-5 flex items-center justify-center px-1'>
-                {cartCount}
-              </span>
-            )}
-          </Link>
+              {cartCount > 0 && (
+                <span className='absolute -top-2 -right-3 bg-black text-white text-xs font-semibold rounded-full min-w-[20px] h-5 flex items-center justify-center px-1'>
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+          )}
         </div>
       </div>
     </nav>
