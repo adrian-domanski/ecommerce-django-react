@@ -8,11 +8,17 @@
 
 ## 📸 Preview
 
-Screenshots available in `/docs`:
+### 🏠 Homepage
 
-- docs/1.png
-- docs/2.png
-- docs/3.png
+![Homepage](docs/1.png)
+
+### 🛍️ Product View
+
+![Product](docs/2.png)
+
+### 🧾 Checkout / Cart
+
+![Checkout](docs/3.png)
 
 ---
 
@@ -60,7 +66,7 @@ The project demonstrates a clean separation between frontend and backend, produc
 - **Frontend:** React, Vite
 - **Infra:** Docker, Docker Compose
 - **Proxy:** Caddy
-- **Other:** REST API, JWT/Auth (if applicable)
+- **Other:** REST API, authentication
 
 ---
 
