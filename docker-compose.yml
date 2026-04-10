@@ -16,7 +16,7 @@ services:
     networks:
       - shared_network
     build: ./backend
-    command: gunicorn config.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./backend:/app
     env_file: .env
